@@ -4,6 +4,8 @@
 - The training dataset is composed of around 8000 pictures of normal frontal face images with diverse ethnicities, we further collected around 180 pictures of faces with symptoms paired with 180  pictures randomly picked from normal face datasets as our testing dataset.
 - We used active shape models (ASMs) to label this dataset via library DLIB.
 
+
+
 ###Variants Selection and Extraction
 
 The Variants were selected according to the paper which claimed to
@@ -33,7 +35,9 @@ and then further applying a counting function to count how many circular structu
   <img width="200" height="200" src="https://user-images.githubusercontent.com/43948081/129056446-51e4dc79-7aba-439d-93cf-7f989bfa90bf.png">
 </p>
 
-##Results
+
+
+###Results
 
 After calcualtion of the variants given below in the table, we used around 8000 images of the training data to calculate the μ and δ of the data of the assumed data taken in normal distribution.
 
@@ -66,10 +70,12 @@ sudo apt-get install libboost-all-dev
 Use this link to download the required .DAT file for dlib
 https://raw.githubusercontent.com/italojs/facial-landmarks-recognition/master/shape_predictor_68_face_landmarks.dat
 
+
+
 ## Steps to Run Script
 1.Run final_test.py and use space bar to capture image and then Esc to confirm the captured image, 
 2.The script will run and find the variants, and tell the disease which could be present according to the model
 
 
-##Reference Paper
+###Reference Paper
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5007273/
