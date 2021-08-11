@@ -6,13 +6,15 @@
 
 
 
-###Variants Selection and Extraction
+## Variants Selection and Extraction
 
 The Variants were selected according to the paper which claimed to
 be verified via certified doctor and practitioners.
 >α represents aggregate value of the CIELAB alpha channel (red-green channel) of the feature
 
-![](https://user-images.githubusercontent.com/43948081/129056377-46d59380-4c0d-422b-b206-d7b2bfed3f5f.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43948081/129056377-46d59380-4c0d-422b-b206-d7b2bfed3f5f.png">
+</p>
 
 We took the aggregate value of the second matrix in the CIELAB format of the picture of the format.
 > β represents the aggregate value of the CIELAB beta channel (yellow-blue channel) of the interested feature
@@ -22,11 +24,18 @@ We took the aggregate value of the third matrix in the CIELAB format of the pict
 >Σ represents the total count of all the pixels belonging to the feature
 -The image obtained of various keypoints is used and their sizes gave the result.
 
-![](https://user-images.githubusercontent.com/43948081/129056393-414d36a1-2b44-4c12-8021-c56bbac63253.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43948081/129056393-414d36a1-2b44-4c12-8021-c56bbac63253.png">
+</p>
+
+
 
 For right face and left face, we just use the midline going through the nose and seperating the image to obtain the pixels
 
-![](https://user-images.githubusercontent.com/43948081/129058638-0a862880-4e8e-4647-b9f9-63610c46c070.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/43948081/129058638-0a862880-4e8e-4647-b9f9-63610c46c070.png">
+</p>
+
 >H is the process of applying the well-known Hough Transform on the CIELAB feature of the skin area,
 
 and then further applying a counting function to count how many circular structures we found, the  mechanism is based on Size Invariant Circle Detection
@@ -37,7 +46,7 @@ and then further applying a counting function to count how many circular structu
 
 
 
-###Results
+## Results
 
 After calcualtion of the variants given below in the table, we used around 8000 images of the training data to calculate the μ and δ of the data of the assumed data taken in normal distribution.
 
@@ -53,7 +62,7 @@ After calcualtion of the variants given below in the table, we used around 8000 
 An outlier is hence defined as a variant whose value is not in <b>μ ± t × δ</b>, where t is the multipler we used  to tighten the degree of normality. We applied the threshold μ ± t × δ on our observations with assumed distribution function and eventually divided the testing dataset into flagged group and unflagged group with respect to different t values.
 
 
-##Install Dependencies via
+## Install Dependencies via
 Run these before installing python libraries
 >sudo apt-get install build-essential cmake
 sudo apt-get install libgtk-3-dev
@@ -77,5 +86,5 @@ https://raw.githubusercontent.com/italojs/facial-landmarks-recognition/master/sh
 2.The script will run and find the variants, and tell the disease which could be present according to the model
 
 
-###Reference Paper
+## Reference Paper
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5007273/
